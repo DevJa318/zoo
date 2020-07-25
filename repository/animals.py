@@ -3,14 +3,18 @@ import os
 
 
 class Animal:
-    energy = 0
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, energy: float = 0.0):
         self._name = name
+        self._energy = energy
 
     @property
     def name(self) -> str:
         return self._name
+
+    @property
+    def energy() -> float:
+        return self._energy
 
     def feed(self):
         self.energy += 1
